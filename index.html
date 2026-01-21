@@ -1,0 +1,287 @@
+<!-- Dichiara al browser che stiamo usando lo standard HTML5 attuale -->
+<!DOCTYPE html>
+<!-- Apre il documento HTML e imposta la lingua su Italiano per accessibilità e SEO -->
+<html lang="it">
+
+<head>
+    <!-- Imposta la codifica dei caratteri universale UTF-8 (supporta accenti, emoji, ecc.) -->
+    <meta charset="UTF-8">
+    <!-- Viewport: Fondamentale per il Responsive Design. Adatta il sito alla larghezza di smartphone e tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta descrizione: Appare nei risultati di ricerca di Google -->
+    <meta name="description" content="FitFlow - Studio di Yoga, Meditazione e Benessere. Ritrova il tuo equilibrio.">
+    <!-- Titolo della pagina che appare nella scheda del browser -->
+    <title>FitFlow | Wellness & Yoga Studio</title>
+    
+    <!-- COLLEGAMENTO AL FILE CSS ESTERNO -->
+    <!-- Collega questo file HTML al foglio di stile 'style.css' salvato nella stessa cartella -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER: La testata del sito, solitamente contiene logo e menu -->
+    <header>
+        <div class="container">
+            <!-- Tag nav: Definisce l'area dedicata ai link di navigazione -->
+            <nav>
+                <!-- Logo: Un link testuale con un'emoji. Porta alla sezione home tramite l'ID -->
+                <a href="#home" class="logo">🌿 FitFlow</a>
+                <!-- ul: Una lista non ordinata per raggruppare i link del menu -->
+                <ul class="nav-links">
+                    <!-- li: Ogni elemento della lista contiene un link (anchor tag <a>) -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#services">Prodotti/Servizi</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                    <!-- Bottone Accedi: Usa una classe CSS 'btn' per apparire come un pulsante -->
+                    <li><a href="#login" class="btn" style="padding: 0.5rem 1rem;">Accedi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: Il contenitore principale per il contenuto unico di questa pagina -->
+    <main>
+        
+        <!-- SEZIONE HOME: Introduzione e Articolo principale del blog -->
+        <section id="home">
+            <div class="container">
+                <!-- Div per centrare il testo del titolo tramite classe CSS -->
+                <div class="text-center">
+                    <!-- h1: Il titolo più importante. Fondamentale averne uno solo per pagina -->
+                    <h1 class="section-title">Benvenuto in FitFlow</h1>
+                    <p style="margin-bottom: 2rem; font-size: 1.1rem;">Il tuo rifugio quotidiano per corpo e mente.</p>
+                </div>
+
+                <!-- article: Indica un contenuto autonomo, come un post di un blog -->
+                <article class="hero-article">
+                    <!-- img: Visualizza un'immagine da un link esterno. Alt descrive l'immagine per i non vedenti -->
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Persona che medita nella natura al tramonto" style="width:100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <!-- h2: Titolo di secondo livello per l'articolo -->
+                    <h2>I benefici della meditazione quotidiana</h2>
+                    <!-- strong: Rende il testo in grassetto, indicando importanza semantica -->
+                    <p><strong>Riduci lo stress scolastico e lavorativo con soli 15 minuti al giorno.</strong></p>
+                    <!-- br: Inserisce un'interruzione di riga (a capo) -->
+                    <br> 
+                    <p>Nel mondo frenetico di oggi, la nostra mente è costantemente sovraccarica. La meditazione è uno strumento scientificamente provato per abbassare lo stress.</p>
+                    <br>
+                    <p>Praticare la consapevolezza (mindfulness) aiuta a:</p>
+                    <!-- ul: Inizio di una lista puntata di benefici -->
+                    <ul style="padding-left: 1.5rem; margin: 1rem 0;">
+                        <li>Migliorare la concentrazione durante lo studio.</li>
+                        <li>Gestire l'ansia prima di esami importanti.</li>
+                        <li>Favorire un sonno più profondo.</li>
+                    </ul>
+                    <p>Inizia oggi il tuo percorso verso la serenità interiore con FitFlow.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SEZIONE CHI SIAMO: Presentazione della filosofia e dei membri dello staff -->
+        <section id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Chi Siamo & Staff</h2>
+                    <p style="max-width: 700px; margin: 0 auto 2rem auto;">
+                        FitFlow nasce per rendere il benessere integrato nella vita di tutti i giorni.
+                    </p>
+                </div>
+
+                <!-- Griglia: Un contenitore che useremo per disporre le card dei membri -->
+                <div class="grid-container">
+                    <!-- Inizio Card Staff 1 -->
+                    <div class="card">
+                        <img src="c:\Users\crist\Desktop\progetto\pine.png" alt="Spinella Cristian" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">Spinella Cristian</h3>
+                            <!-- span: Elemento neutro usato qui per lo stile del sottotitolo -->
+                            <span class="card-subtitle">Senior Yoga Instructor</span>
+                            <p>Specializzato in Yoga Congolese e tanto altro con oltre 10 anni di esperienza e principalmente da fallimenti.</p>
+                        </div>
+                    </div>
+                    <!-- Inizio Card Staff 2 -->
+                    <div class="card">
+                        <img src="c:\Users\crist\Desktop\progetto\matte.jpg" alt="Matteo Versuraro" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">Matteo Versuraro</h3>
+                            <span class="card-subtitle">Meditation Coach</span>
+                            <p>Esperto in tecniche di Mindfulness e meditazioni guidate, imparate da saggi Albanesi, specializzato ad aprire il terzo cranio.</p>
+                        </div>
+                    </div>
+                    <!-- Inizio Card Staff 3 -->
+                    <div class="card">
+                        <img src="C:\Users\crist\Desktop\progetto\abo.png" alt="Dlia Abdessamad" class="card-img">
+                        <div class="card-content">
+                            <h3 class="card-title">Dlia Abdessamad</h3>
+                            <span class="card-subtitle">Specialista della Nutrizione</span>
+                            <p>Crea piani alimentari personalizzati per massimizzare la maggior quantità di Monster possibile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE SERVIZI: Lista dei corsi disponibili con dettagli e pulsanti -->
+        <section id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">I Nostri Corsi</h2>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Card Corso 1 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">Morning Yoga</h3>
+                            <!-- Tag p per informazioni testuali strutturate -->
+                            <p><strong>Orari:</strong> Lun/Mer/Ven - 07:00</p>
+                            <p><strong>Istruttore:</strong> Spinella Cristian</p>
+                            <p>Risveglio muscolare per iniziare la giornata con il piede giusto.</p>
+                            <!-- Etichetta per l'intensità (colore gestito via CSS) -->
+                            <span class="intensity medium">Intensità: Media</span>
+                            <!-- Div per separare il bottone dal testo sovrastante -->
+                            <div style="margin-top: 1rem;">
+                                <button class="btn">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Corso 2 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">Meditation & Relax</h3>
+                            <p><strong>Orari:</strong> Mar/Gio - 19:00</p>
+                            <p><strong>Istruttore:</strong> Matteo Versuraro</p>
+                            <p>Sessioni dedicate al rilassamento profondo e alla respirazione.</p>
+                            <span class="intensity low">Intensità: Bassa</span>
+                            <div style="margin-top: 1rem;">
+                                <button class="btn">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Corso 3 -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="card-title">Power Yoga</h3>
+                            <p><strong>Orari:</strong> Sabato - 10:00</p>
+                            <p><strong>Istruttore:</strong>Dlia Abdessamad</p>
+                            <p>Workshop intensivo focalizzato sulla forza e la resistenza.</p>
+                            <span class="intensity high">Intensità: Alta</span>
+                            <div style="margin-top: 1rem;">
+                                <button class="btn">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE CONTATTI: Modulo per l'invio di messaggi da parte degli utenti -->
+        <section id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Richiedi Appuntamento</h2>
+                </div>
+                
+                <div class="form-box">
+                    <!-- tag form: Contenitore per i campi di input. action="#" indica nessuna destinazione reale -->
+                    <form action="#" method="POST">
+                        <!-- Form group: Utile per gestire gli spazi tra etichette e input via CSS -->
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <!-- input type="text": Campo di testo libero. required impedisce l'invio se vuoto -->
+                            <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <!-- input type="email": Controlla automaticamente se il formato dell'email è valido -->
+                            <input type="email" id="email" name="email" placeholder="esempio@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <!-- textarea: Consente l'inserimento di più righe di testo -->
+                            <textarea id="message" name="message" rows="5" placeholder="Scrivi qui..." required></textarea>
+                        </div>
+
+                        <!-- button type="submit": Invia i dati inseriti nel form -->
+                        <button type="submit" class="btn" style="width: 100%;">Invia Richiesta</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE ACCEDI: Modulo per l'autenticazione degli utenti iscritti -->
+        <section id="login">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Area Riservata</h2>
+                </div>
+
+                <div class="form-box" style="border-top: 5px solid var(--accent-color);">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" name="login-email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <!-- input type="password": Oscura i caratteri inseriti per sicurezza -->
+                            <input type="password" id="login-password" name="login-password" required>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--accent-color);">Accedi</button>
+                        
+                        <p style="margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+                            Non hai un account? <a href="#" style="color: var(--accent-color);">Registrati qui</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEZIONE POWERED BY: Crediti agli sviluppatori del sito -->
+        <section id="powered" style="background-color: #333; color: white;">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title" style="color: white; border-color: white;">Powered By Dev Team</h2>
+                </div>
+                <div class="grid-container" style="margin-top: 2rem;">
+                    <!-- Membro Team 1 -->
+                    <div class="card" style="width: 250px;">
+                        <img src="c:\Users\crist\Desktop\progetto\tedesco.png" alt="Tedesco Simone" class="card-img" style="height: 200px;">
+                        <div class="card-content">
+                            <h4 style="color: var(--text-dark);">Tedesco Simone</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Il King del Volta</p>
+                        </div>
+                    </div>
+                     <!-- Membro Team 2 -->
+                     <div class="card" style="width: 250px;">
+                        <img src="c:\Users\crist\Desktop\progetto\raviola.png" alt="Raviola Matteo" class="card-img" style="height: 200px;">
+                        <div class="card-content">
+                            <h4 style="color: var(--text-dark);">Raviola Matteo</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Il più Forte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Piè di pagina con copyright e note legali/informative -->
+    <footer>
+        <div class="container">
+            <!-- p: Paragrafo per i diritti d'autore -->
+            <p>&copy; 1944 FitFlow Wellness Studio. Tutti i diritti riservati a Balachia.</p>
+            <!-- Nota didattica con opacità ridotta per apparire meno evidente -->
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">Progetto a scopo di lucro(ezia) - Web Gambler Course</p>
+        </div>
+    </footer>
+
+</body>
+</html>

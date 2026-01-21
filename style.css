@@ -1,0 +1,292 @@
+/* --- VARIABILI E RESET (Base) --- */
+/* Definisco colori e spazi qui per poterli cambiare facilmente in tutto il sito */
+:root {
+    --primary-color: #6B8E23; /* Variabile per il Verde Oliva (colore principale) */
+    --secondary-color: #F5F5DC; /* Variabile per il Beige (sfondi alternati) */
+    --text-dark: #333333; /* Variabile per testo scuro (quasi nero) */
+    --text-light: #ffffff; /* Variabile per testo chiaro (bianco) */
+    --accent-color: #e67e22; /* Variabile per colore accento (arancione) */
+    --spacing-unit: 1rem; /* Unità di spaziatura standard (16px) */
+}
+
+/* Selettore universale: applica queste regole a TUTTI gli elementi */
+* {
+    box-sizing: border-box; /* Include padding e bordi nel calcolo della larghezza (evita layout rotti) */
+    margin: 0; /* Rimuove i margini di default del browser */
+    padding: 0; /* Rimuove il padding di default del browser */
+}
+
+/* Stili base per il corpo della pagina */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Imposta il font principale e quelli di riserva */
+    line-height: 1.6; /* Aumenta l'interlinea per migliorare la leggibilità */
+    color: var(--text-dark); /* Usa il colore testo definito nelle variabili */
+    background-color: #fafafa; /* Colore di sfondo generale grigio chiarissimo */
+}
+
+/* Regola globale per le immagini */
+img {
+    max-width: 100%; /* L'immagine non sarà mai più larga del suo contenitore (responsive) */
+    height: auto; /* Mantiene le proporzioni originali (aspect ratio) */
+    display: block; /* Rimuove lo spazio bianco extra sotto le immagini inline */
+}
+
+/* --- CLASSI DI UTILITÀ (Classi riutilizzabili ovunque) --- */
+
+/* Contenitore principale per centrare il contenuto */
+.container {
+    width: 90%; /* Occupa il 90% della larghezza dello schermo su mobile */
+    max-width: 1200px; /* Non diventa mai più largo di 1200px su schermi grandi */
+    margin: 0 auto; /* Centra il blocco orizzontalmente (0 sopra/sotto, auto destra/sinistra) */
+    padding: 0 var(--spacing-unit); /* Aggiunge spazio interno laterale */
+}
+
+/* Classe per allineare il testo al centro */
+.text-center { text-align: center; }
+
+/* Stile per i titoli delle sezioni */
+.section-title {
+    font-size: 2rem; /* Grandezza del testo */
+    margin-bottom: 2rem; /* Spazio sotto il titolo */
+    color: var(--primary-color); /* Usa il verde principale */
+    text-align: center; /* Centra il testo */
+    border-bottom: 2px solid var(--primary-color); /* Linea verde decorativa sotto il titolo */
+    display: inline-block; /* Fa sì che la linea sia lunga quanto il testo, non tutta la pagina */
+    padding-bottom: 0.5rem; /* Spazio tra testo e linea */
+}
+
+/* Stile standard per i pulsanti */
+.btn {
+    display: inline-block; /* Permette di dare dimensioni e margini mantenendo il flusso del testo */
+    padding: 0.8rem 1.5rem; /* Spaziatura interna del bottone */
+    background-color: var(--primary-color); /* Sfondo verde */
+    color: var(--text-light); /* Testo bianco */
+    text-decoration: none; /* Rimuove la sottolineatura tipica dei link */
+    border-radius: 5px; /* Arrotonda gli angoli */
+    border: none; /* Rimuove il bordo predefinito */
+    cursor: pointer; /* Cambia il cursore in una manina al passaggio del mouse */
+    font-size: 1rem; /* Grandezza testo */
+    transition: background 0.3s; /* Anima il cambio colore in 0.3 secondi */
+}
+
+/* Effetto quando il mouse passa sopra il bottone */
+.btn:hover {
+    background-color: #556B2F; /* Colore verde più scuro */
+}
+
+/* --- HEADER & NAVBAR (Navigazione) --- */
+header {
+    background-color: var(--text-light); /* Sfondo bianco */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Leggera ombra sotto la navbar */
+    position: sticky; /* Rende la navbar "appiccicosa" */
+    top: 0; /* La fissa in cima alla pagina quando si scorre */
+    z-index: 1000; /* Assicura che stia sopra a tutto il resto (livello z) */
+    padding: 1rem 0; /* Spazio sopra e sotto */
+}
+
+/* Contenitore della navigazione flexbox */
+nav {
+    display: flex; /* Attiva Flexbox */
+    flex-direction: column; /* MOBILE: elementi uno sotto l'altro */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    gap: 1rem; /* Spazio tra logo e link */
+}
+
+/* Stile del logo testuale */
+.logo {
+    font-size: 1.5rem; /* Grandezza */
+    font-weight: bold; /* Grassetto */
+    color: var(--primary-color); /* Colore verde */
+    text-decoration: none; /* Niente sottolineatura */
+    text-transform: uppercase; /* Tutto maiuscolo */
+    letter-spacing: 2px; /* Spazio tra le lettere */
+}
+
+/* Lista dei link di navigazione */
+.nav-links {
+    list-style: none; /* Rimuove i pallini della lista */
+    display: flex; /* Mette i link in riga (anche su mobile se c'è spazio, ma qui wrappano) */
+    flex-wrap: wrap; /* Se non c'è spazio, va a capo */
+    justify-content: center; /* Centra i link */
+    gap: 15px; /* Spazio tra i link */
+}
+
+/* Stile dei singoli link */
+.nav-links a {
+    text-decoration: none; /* Niente sottolineatura */
+    color: var(--text-dark); /* Colore scuro */
+    font-weight: 500; /* Spessore medio */
+    transition: color 0.3s; /* Animazione cambio colore */
+}
+
+/* Effetto hover sui link */
+.nav-links a:hover {
+    color: var(--primary-color); /* Diventa verde al passaggio del mouse */
+}
+
+/* --- LAYOUT A GRIGLIA (Per Staff, Servizi, ecc.) --- */
+.grid-container {
+    display: flex; /* Usa Flexbox per la griglia */
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo se non c'è spazio */
+    gap: 2rem; /* Spazio tra le card (orizzontale e verticale) */
+    justify-content: center; /* Centra le card nella riga */
+}
+
+/* --- CARD (Elemento modulare riutilizzabile) --- */
+.card {
+    background: white; /* Sfondo bianco */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Ombra leggera */
+    overflow: hidden; /* Nasconde il contenuto che esce dai bordi arrotondati */
+    width: 100%; /* MOBILE: La card occupa tutta la larghezza disponibile */
+    transition: transform 0.3s ease; /* Animazione per il movimento */
+    display: flex; /* Flexbox interno alla card */
+    flex-direction: column; /* Dispone immagine e testo verticalmente */
+}
+
+/* Effetto hover sulla card */
+.card:hover {
+    transform: translateY(-5px); /* Sposta la card in alto di 5px */
+}
+
+/* Immagine dentro la card */
+.card-img {
+    width: 100%; /* Occupa tutta la larghezza della card */
+    height: 250px; /* Altezza fissa */
+    object-fit: cover; /* Taglia l'immagine per riempire lo spazio senza deformarla */
+}
+
+/* Contenitore del testo dentro la card */
+.card-content {
+    padding: 1.5rem; /* Spaziatura interna */
+    flex-grow: 1; /* Occupa tutto lo spazio rimanente in altezza */
+}
+
+/* Titolo della card */
+.card-title {
+    font-size: 1.25rem; /* Grandezza */
+    margin-bottom: 0.5rem; /* Spazio sotto */
+    color: var(--primary-color); /* Colore verde */
+}
+
+/* Sottotitolo della card (es. Ruolo) */
+.card-subtitle {
+    font-weight: bold;
+    color: #777; /* Grigio medio */
+    font-size: 0.9rem; /* Un po' più piccolo */
+    margin-bottom: 1rem;
+    display: block; /* Va a capo */
+}
+
+/* --- ETICHETTE INTENSITÀ (Per i corsi) --- */
+.intensity {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; /* Spazio interno all'etichetta */
+    border-radius: 4px; /* Angoli leggermente arrotondati */
+    font-size: 0.8rem; /* Testo piccolo */
+    font-weight: bold;
+    color: white; /* Testo bianco */
+    margin-top: 0.5rem;
+}
+/* Classi specifiche per i colori delle intensità */
+.low { background-color: #88c057; } /* Verde chiaro */
+.medium { background-color: #f39c12; } /* Arancione */
+.high { background-color: #e74c3c; } /* Rosso */
+
+/* --- SEZIONI GENERALI --- */
+section {
+    padding: 4rem 0; /* Tanto spazio sopra e sotto ogni sezione */
+    scroll-margin-top: 80px; /* Trucco per non far coprire il titolo dalla navbar fissa quando si clicca un link */
+}
+
+/* Seleziona ogni sezione PARI (2, 4, 6...) */
+section:nth-child(even) {
+    background-color: var(--secondary-color); /* Dà uno sfondo beige alternato */
+}
+
+/* Stile specifico per l'articolo della Home */
+.hero-article {
+    max-width: 800px; /* Larghezza massima per leggibilità */
+    margin: 0 auto; /* Centrato */
+    background: white; /* Sfondo bianco */
+    padding: 2rem; /* Spazio interno */
+    border-radius: 8px; /* Arrotondato */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Ombra molto leggera */
+}
+
+/* --- FORM (Contatti e Login) --- */
+.form-box {
+    max-width: 500px; /* Larghezza massima del form */
+    margin: 0 auto; /* Centrato */
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Gruppo input + label */
+.form-group {
+    margin-bottom: 1.5rem; /* Spazio tra un campo e l'altro */
+}
+
+/* Etichetta del campo */
+label {
+    display: block; /* Va a capo sopra l'input */
+    margin-bottom: 0.5rem; /* Spazio sotto l'etichetta */
+    font-weight: bold;
+}
+
+/* Campi di input e textarea */
+input, textarea {
+    width: 100%; /* Larghi quanto il contenitore */
+    padding: 0.8rem; /* Spazio interno per scrivere comodi */
+    border: 1px solid #ccc; /* Bordo grigio chiaro */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Stato Focus (quando clicchi dentro l'input) */
+input:focus, textarea:focus {
+    outline: none; /* Rimuove il bordo blu di default */
+    border-color: var(--primary-color); /* Bordo diventa verde */
+    box-shadow: 0 0 5px rgba(107, 142, 35, 0.3); /* Alone verde intorno */
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--text-dark); /* Sfondo scuro */
+    color: var(--text-light); /* Testo bianco */
+    text-align: center; /* Testo centrato */
+    padding: 2rem 0; /* Spazio verticale */
+    margin-top: 2rem; /* Distanza dall'ultima sezione */
+}
+
+/* --- MEDIA QUERIES (RENDONO IL SITO RESPONSIVE) --- */
+
+/* TABLET: Regole applicate solo se lo schermo è più largo di 600px */
+@media (min-width: 600px) {
+    nav {
+        flex-direction: row; /* La navbar diventa orizzontale */
+        justify-content: space-between; /* Spazio tra logo (sx) e link (dx) */
+        padding: 1rem 2rem; /* Padding laterale aumentato */
+    }
+    
+    .card {
+        width: 45%; /* Le card occupano quasi metà spazio (2 per riga) */
+    }
+}
+
+/* DESKTOP: Regole applicate solo se lo schermo è più largo di 900px */
+@media (min-width: 900px) {
+    .container {
+        width: 80%; /* Restringe il contenitore centrale per non avere righe lunghissime */
+    }
+
+    .card {
+        width: 30%; /* Le card occupano un terzo (3 per riga) */
+    }
+
+    .hero-article {
+        padding: 3rem; /* Più spazio interno nell'articolo */
+    }
+}
